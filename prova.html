@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <!-- Compatibilit&aacute; con iPhone -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>{{ title }}</title>
+
+  <!-- Colore barra su Chrome mobile -->
+  <meta name="theme-color" content="#ffa82e">
+
+  <meta name="author" content="Longo, Orlich, Tassara">
+  <meta name="description" content="{{ description }}">
+  <meta name="keywords" content="paperelle, gioco, compagnia, giallo, gomma">
+
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <script async defer src="assets/js/lib.js"></script>
+  <script async defer src="assets/js/header.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
+  <link rel="stylesheet" href="assets/css/aggiunte.css" />
+  <link rel="stylesheet" href=" https://unpkg.com/bulma-carousel@3.0.0/dist/css/bulma-carousel.min.css" />
+  <script async defer src="https://unpkg.com/bulma-carousel@3.0.0/dist/js/bulma-carousel.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => { 
+      
+      var carousels = bulmaCarousel.attach(); 
+
+    })
+  </script>
+</head>
+<header>
+  <nav class="navbar is-primary">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="index.php">
+        <img src="assets/images/rubber-duck-icon-logo.png" width="112" height="28" alt="Il nostro logo">
+      </a>
+      <a class="navbar-burger" onclick="headerOpenHamburgerMenu()">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start">
+        <a href="about.php" class="navbar-item">
+          <span class="icon">
+            <i class="fas fa-info"></i>
+          </span>
+          <span>Chi siamo</span>
+        </a>
+        <a href="blog.php" class="navbar-item">
+          <span class="icon">
+            <i class="far fa-newspaper"></i>
+          </span>
+          <span>Blog</span>
+        </a>
+        <a href="catalog.php" class="navbar-item">
+          <span class="icon">
+            <i class="fas fa-book-open"></i>
+          </span>
+          <span>Catalogo</span>
+        </a>
+      </div>
+      <div class="navbar-end">
+        <!--
+            <div class="navbar-item is-hidden-touch">
+              <div class="level">
+                <div class="level-left">
+                  <div class="level-item">
+                    <span>Ciao, <a>Gianni</a></span>
+                    <span class="divider"></span>
+                  </div>
+                </div>
+                <div class="level-right">
+                  <figure class="level-item image is-32x32">
+                    <img class="is-rounded" src="assets/images/profile.jpeg">
+                  </figure>
+                </div>
+              </div>
+            </div>
+          -->
+        <a href="registration.php" class="navbar-item is-hidden-desktop">
+          <span class="icon">
+            <i class="fas fa-user-plus"></i>
+          </span>
+          <span>Registrati</span>
+        </a>
+        <a id="login-link-mobile" class="navbar-item is-hidden-desktop" onclick="headerOpenLoginBar()">
+          <span class="icon">
+            <i class="fas fa-sign-in-alt"></i>
+          </span>
+          <span>Accedi</span>
+        </a>
+        <a class="navbar-item is-hidden-desktop">
+          <span class="icon">
+            <i class="fas fa-user"></i>
+          </span>
+          <span>Profilo</span>
+        </a>
+        <div class="buttons is-hidden-touch">
+          <div class="navbar-item">
+            <a href="registration.php" class="button is-link">
+              <strong>Registrati</strong>
+            </a>
+            <a id="login-button-desktop" class="button is-light" onclick="headerOpenLoginBar()">
+              Accedi
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+</header>
+<body>
+  <main class="section">
+    <div class="tile is-ancestor">
+      <div class="tile is-4 is-vertical is-parent">
+        
+        <article class=" is-child message is-link">
+            <div class="message-body">
+                <p class="title">Le mille piú uno paperelle</p>
+                <p>Scegli la tua paperella preferita tra una ricca collezione di papere selezionate dai
+                  migliori esperti del globo in pennuti in vinile. <br> Visita io nostro catalogo!</p>
+            </div>
+          </article>
+          
+          <article class=" is-child message is-warning">
+              <div class="message-body">
+                  <p class="title">Un prodotto pregiato</p>
+                  <div class="content ">
+                  <ul>
+                    <li>Tutte le nostre papere sono certificate CE (Comunitá Europea).</li>
+                    <li>Nessun materiale tossico o nocivo.</li>
+                    <li>Severo controllo di qualitá (ciascuna papera viene sottoposta a un bagno di prova da uno dei
+                      nostri addetti).</li>
+                    <li>Tutti i nostri impiegati sono contenti di lavorare per noi.</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+           
+            <article class=" is-child message is-success is-hidden-touch">
+                <div class="message-body">
+                    <p class="title">Collezionale tutte</p>
+                    <div class="content ">
+                    <ul>
+                        <li>Originali</li>
+                        <li>Divertenti</li>
+                        <li>Semplici</li>
+                        <li>Uniche</li>
+                    </ul>
+                  </div>
+                    <p>Vieni a trovarci, ti aspettiamo!</p>
+                </div>
+              </article>
+       
+      </div>
+      
+          <div class='is-child carousel carousel-animated carousel-animate-slide' data-autoplay="true;" style="max-height: 800px;;">
+              <div class='carousel-container' >
+                <div class='carousel-item has-background is-active'>
+                  <img class="is-background" src="assets/images/rubber-duck.jpg" alt="" width="640" height="310" />
+                </div>
+                <div class='carousel-item has-background'>
+                  <img class="is-background" src="assets/images/rubber-duck-1401225.jpg" alt="" width="640" height="310" />
+                
+                </div>
+                <div class='carousel-item has-background'>
+                  <img class="is-background" src="assets/images/r_562524_gUQRy.jpg" alt="" width="640" height="310" />
+                 
+                </div>
+                <div class='carousel-item has-background'>
+                  <img class="is-background" src="assets/images/home.jpg" alt="" width="640" height="310" />
+               
+                </div>
+             
+              </div>
+               <div class="carousel-navigation is-overlay">
+                <div class="carousel-nav-left">
+                  <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                </div>
+                <div class="carousel-nav-right">
+                  <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </div>
+              </div>
+            
+            <br> 
+            <br> 
+            <article class="is-child message is-success is-hidden-desktop">
+                <div class="message-body">
+                    <p class="title">Collezionale tutte</p>
+                    <div class="content ">
+                        <ul>
+                            <li>Originali</li>
+                            <li>Divertenti</li>
+                            <li>Semplici</li>
+                            <li>Uniche</li>
+                        </ul>
+                      </div>
+                    <p>Vieni a trovarci, ti aspettiamo!</p>
+                </div>
+              </article>
+            </div>
+      </div>
+      
+    
+  </main>
+</body>
+
+
+<footer class="footer">
+  <div class="content">
+    <div class="columns is-vcentered">
+      <div class="column">
+        <figure class="image is-4by1">
+          <img src="assets/images/rubber-duck-icon-logo.png" alt="Il nostro logo">
+        </figure>
+      </div>
+      <div class="column">
+        <div>
+          <h4>Le mille pi&uacute; uno paperelle s.n.c.</h4>
+          <p>
+            <span class="icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </span>
+            Via Dodecaneso, 35, 16146 Genova (GE)
+          </p>
+          <p>
+            <span class="icon">
+              <i class="fas fa-phone"></i>
+            </span>
+            +39 010 353 2148
+          </p>
+          <p>
+            <span class="icon">
+              <i class="fas fa-at"></i>
+            </span>
+            paperelle@dibris.unige.it
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</html>
